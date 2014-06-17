@@ -18,12 +18,12 @@ class Rotation(Enum):
     right = 1
 
 
-class Block:
+class Block(object):
     def __init__(self, state=State.empty):
         self.state = state
 
 
-class Piece:
+class Piece(object):
     def move(self, translation):
         transform = translation.value
         for orientation in self.orientations:
@@ -111,7 +111,7 @@ class RSPiece(Piece):
         ]
 
 
-class Grid:
+class Grid(object):
     def __init__(self, width, height):
         self.width = width
         self.height = height
